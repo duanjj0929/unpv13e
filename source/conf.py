@@ -16,18 +16,16 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'UNIX Network Programming, Volume 1, Third Edition'
-copyright = '2019, Duanjj0929'
-author = 'Duanjj0929'
+copyright = '2019, duanjj0929'
+author = 'duanjj0929'
 
 # The short X.Y version
-version = ''
+version = '0.1'
 # The full version, including alpha/beta/rc tags
-release = '1.0'
-
+release = '0.1.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -38,17 +36,20 @@ release = '1.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -67,7 +68,6 @@ exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -97,12 +97,10 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'UNIXNetworkProgrammingVolume1ThirdEditiondoc'
-
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -128,20 +126,20 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'UNIXNetworkProgrammingVolume1ThirdEdition.tex', 'UNIX Network Programming, Volume 1, Third Edition Documentation',
-     'Duanjj0929', 'manual'),
+    (master_doc, 'UNIXNetworkProgrammingVolume1ThirdEdition.tex',
+     'UNIX Network Programming, Volume 1, Third Edition Documentation',
+     'duanjj0929', 'manual'),
 ]
-
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'unixnetworkprogrammingvolume1thirdedition', 'UNIX Network Programming, Volume 1, Third Edition Documentation',
+    (master_doc, 'unixnetworkprogrammingvolume1thirdedition',
+     'UNIX Network Programming, Volume 1, Third Edition Documentation',
      [author], 1)
 ]
-
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -149,11 +147,11 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'UNIXNetworkProgrammingVolume1ThirdEdition', 'UNIX Network Programming, Volume 1, Third Edition Documentation',
-     author, 'UNIXNetworkProgrammingVolume1ThirdEdition', 'One line description of project.',
-     'Miscellaneous'),
+    (master_doc, 'UNIXNetworkProgrammingVolume1ThirdEdition',
+     'UNIX Network Programming, Volume 1, Third Edition Documentation', author,
+     'UNIXNetworkProgrammingVolume1ThirdEdition',
+     'One line description of project.', 'Miscellaneous'),
 ]
-
 
 # -- Options for Epub output -------------------------------------------------
 
